@@ -20,13 +20,13 @@ module.exports = function ({ api, models }) {
               const _ID = file.replace('.json', '');
               return _ADMINIDs.includes(_ID) || global.data.allThreadID.includes(_ID);
             });
-            console.log('Priyansh Rajput');
+            console.log('RDX Rajput');
             await new Promise(async resolve => {
                 for (const checkttFile of checkttData) {
                     const checktt = JSON.parse(fs.readFileSync(checkttDataPath + checkttFile));
                     let storage = [], count = 1;
                     for (const item of checktt.day) {
-                        const userName = await Users.getNameUser(item.id) || 'Priyansh Rajput';
+                        const userName = await Users.getNameUser(item.id) || 'RDX Rajput';
                         const itemToPush = item;
                         itemToPush.name = userName;
                         storage.push(itemToPush);
@@ -58,12 +58,12 @@ module.exports = function ({ api, models }) {
 
             await new Promise(async resolve => {
                 if (day_now == 1) {
-                    console.log('Priyansh Rajput');
+                    console.log('RDX Rajput');
                     for (const checkttFile of checkttData) {
                         const checktt = JSON.parse(fs.readFileSync(checkttDataPath + checkttFile));
                         let storage = [], count = 1;
                         for (const item of checktt.week) {
-                            const userName = await Users.getNameUser(item.id) || 'Priyansh Hun Yar';
+                            const userName = await Users.getNameUser(item.id) || 'RDX Hun Yar';
                             const itemToPush = item;
                             itemToPush.name = userName;
                             storage.push(itemToPush);
